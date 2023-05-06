@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="/accets/css/style.css">
         <link rel="stylesheet" href="../accets/css/hangburger.css">
 <style>
-      @media (max-width: 575px) {
+      @media (max-width: 800px) {
         .center{
             flex-direction: column;
         }
@@ -19,11 +19,25 @@
             padding-top: 0;
         }
         .box-1{
-            height: 85vh;
+            height: 70vh;
         }
         .box-2{
-            height: 85vh;
+            margin-top: 2rem;
+            height: 70vh;
         }
+        .box{
+        flex-direction: column;
+        align-items: center;
+       }
+       @media (max-width:300px) {
+        .box-1{
+            height: 80vh;
+        }
+        .box-2{
+            margin-top: 2rem;
+            height: 80vh;
+        }
+       }
   }
 </style>
     </head>
@@ -95,7 +109,7 @@
             <article class="explore" id="explore">
                 <section class="shows-section section center">
                     <div class="container">
-                        <div class="box mt-5">
+                        <div class="box mt-5 mb-4">
                             <div class="box-1 now-showing">
                                 <div class="title center pt-3">
                                     <h2>Now showing Movies</h2>

@@ -181,7 +181,7 @@
     position: absolute;
     }
     .section{
-        height: 100vh;
+        height: 100%;
     }
     
     /* css for home */
@@ -247,6 +247,10 @@
     display: flex;
     justify-content: space-between;
     
+    }
+    @media (max-width:600) {
+      
+
     }
     .box-1{
     background-color: #F1FAEE;
