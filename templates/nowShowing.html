@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booker | Now Showing</title>
+    <link rel="stylesheet" href="../accets/css/style.css">
+    <link rel="stylesheet" href="../accets/css/hangburger.css">
+</head>
+<body>
+    <header>
+        <nav class="nav" id="nav">
+            <div class="container-fluid flex nav-main">
+                <a class="nav-title pt-05 pl-2" href="/index.html">Movie Booker</a>
+                <div class="nav-containt flex justify ">
+                    <ul class="nav-items flex ">
+                        <li><a href="/index.html#home" class="list link">Home</a></li>
+                        <li><a href="/index.html#about" class="list link">About</a></li>
+                        <li><a href="/index.html#contactUs" class="list link">Contact Us</a></li>
+                    </ul>
+
+                </div>
+              
+            </div>
+            <div class="container-fluid hangburder-container">
+                <div class="hamburger-container">
+                    <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+                    <div class="hamburger-dropdown" id="hamburger-dropdown" name = "deactivate">
+                      <ul class="hamburger-items">
+                        <li><a href="#home" class="hamburger-link">Home</a></li>
+                        <li><a href="#explore" class="hamburger-link">Explore</a></li>
+                        <li><a href="#about" class="hamburger-link">About</a></li>
+                        <li><a href="#contactUs" class="hamburger-link">Contact Us</a></li>
+                      </ul>
+                    </div>
+                  </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+<article class="title">
+    <div class="title-text center text-white title-text">
+        <h1>NOW SHOWING IN CINEMAS</h1>
+    </div>
+</article>
+        <article class="shows">
+            <section class="shows-section section ">
+                <div class="container-fluid">
+                    <div class="shows-box">
+                        <div class=" show-cards flex-col">
+                            <div class="card card-1 box-style">
+                                <div class="card-title">
+                                    <h2>BHOLAA</h2>
+                                </div>
+                                <div class="card-img">
+                                    <img src="../accets/img/now showing/bhola.jpg" alt="" style="width: 14rem;height: 18rem;">
+                                </div>
+                                <div class="card-desc">
+                                    <h4>Show Timings</h4>
+                                    <div class="timing">
+                                        <p>9am - 12pm</p>
+                                        <p>12pm - 3pm</p>
+                                        <p>3am - 6pm</p>
+                                    </div>
+                                    <div class="book-bhola">
+                                        <a class="btn btn-2" href="/templates/bookTickets.html" role="button">Book</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-3 box-style">
+                                <div class="card-title">
+                                    <h2>EVIL DEAD RISE</h2>
+                                </div>
+                                <div class="card-img">
+                                    <img src="../accets/img/now showing/evildeadrise.jpg" alt="" style="width: 14rem;height: 18rem;">
+                                </div>
+                                <div class="card-desc">
+                                    <h4>Show Timings</h4>
+                                    <div class="timing">
+                                        <p>9am - 12pm</p>
+                                        <p>12pm - 3pm</p>
+                                        <p>3am - 6pm</p>
+                                    </div>
+                                    <div class="book-evildeadrise">
+                                        <a class="btn btn-2" href="/templates/bookTickets.html" role="button">Book</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-3 box-style">
+                                <div class="card-title">
+                                    <h2>FAST X</h2>
+                                </div>
+                                <div class="card-img">
+                                    <img src="../accets/img/now showing/fastX.jpg" alt="" style="width: 14rem;height: 18rem;">
+                                </div>
+                                <div class="card-desc">
+                                    <h4>Show Timings</h4>
+                                    <div class="timing">
+                                        <p>9am - 12pm</p>
+                                        <p>12pm - 3pm</p>
+                                        <p>3am - 6pm</p>
+                                    </div>
+                                    <div class="book-fastx">
+                                        <a class="btn btn-2" href="/templates/bookTickets.html" role="button">Book</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-4 box-style">
+                                <div class="card-title center">
+                                    <h2>GUARDIANS OF THE GALAXY VOL 3</h2>
+                                </div>
+                                <div class="card-img">
+                                    <img src="../accets/img/now showing/gog3.jpg" alt="" style="width: 14rem;height: 18rem;">
+                                </div>
+                                <div class="card-desc">
+                                    <h4>Show Timings</h4>
+                                    <div class="timing">
+                                        <p>9am - 12pm</p>
+                                        <p>12pm - 3pm</p>
+                                        <p>3am - 6pm</p>
+                                    </div>
+                                    <div class="book-gog3">
+                                        <a class="btn btn-2" href="/templates/bookTickets.html" role="button">Book</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

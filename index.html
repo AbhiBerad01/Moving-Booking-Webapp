@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Booker</title>
+        <link rel="stylesheet" href="/accets/css/style.css">
+        <link rel="stylesheet" href="../accets/css/hangburger.css">
+<style>
+      @media (max-width: 575px) {
+        .center{
+            flex-direction: column;
+        }
+  }
+</style>
+    </head>
+
+    <body>
+        <header>
+            <nav class="nav" id="nav">
+                <div class="container-fluid flex nav-main">
+                    <a class="nav-title pt-05 pl-2" href="/index.html">Movie Booker</a>
+                    <div class="nav-containt flex justify ">
+                        <ul class="nav-items flex ">
+                            <li><a href="#home" class="list link">Home</a></li>
+                            <li><a href="#explore" class="list link">Explore</a></li>
+                            <li><a href="#about" class="list link">About</a></li>
+                            <li><a href="#contactUs" class="list link">Contact Us</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="left pt-05 flex mr-3">
+                        <a class="btn btn-2 link" type="button" href="/templates/signup.html">Sign Up</a>
+                        <a class="btn btn-2 link" type="button" href="/templates/signin.html">Sign In</a>
+                    </div>
+                </div>
+                <div class="container-fluid hangburder-container">
+                    <div class="hamburger-container">
+                        <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+                        <div class="hamburger-dropdown" id="hamburger-dropdown" name = "deactivate">
+                          <ul class="hamburger-items">
+                            <li><a href="#home" class="hamburger-link list link">Home</a></li>
+                            <li><a href="#explore" class="hamburger-link list link">Explore</a></li>
+                            <li><a href="#about" class="hamburger-link list link">About</a></li>
+                            <li><a href="#contactUs" class="hamburger-link list link">Contact Us</a></li>
+                            <li><a href="/templates/signup.html" class="hamburger-link list link">Sign Up</a></li>
+                            <li><a href="/templates/signin.html" class="hamburger-link list link">Sign In</a></li>
+                          </ul>
+                          
+                        </div>
+                      </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <article class="home" id="home">
+                <section class="home-section">
+                    <div class="bg-image"></div>
+                    <div class="bg-text">
+                        <div class="main-text">
+                            <h1 style="text-align: center; color: white">Movie
+                                Booker</h1>
+                        </div>
+                        <div class="info">
+                            <h4>
+                                EXPLORE THE BEAUTY OF CINEMA WITH <strong>MOVIE
+                                    BOOKER</strong>.
+                            </h4>
+                            Movie Booker is the ultimate destination for movie
+                            enthusiasts, providing seamless and hassle-free
+                            movie ticket booking services.
+                            With Movie Booker, you can easily browse and book
+                            tickets for the latest movies across multiple
+                            theaters and showtimes.
+                            Whether you're a cinephile or just looking for a fun
+                            night out, Movie Booker is your go-to platform for
+                            all your movie ticketing needs.
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <article class="explore" id="explore">
+                <section class="shows-section section center">
+                    <div class="container">
+                        <div class="box mt-5">
+                            <div class="box-1 now-showing">
+                                <div class="title center pt-3">
+                                    <h2>Now showing Movies</h2>
+                                </div>
+                                <div class="now-showing-img center">
+                                    <img class="box-img" src="./accets/img/now-showing.jpg" alt="" srcset="">
+                                </div>
+                                <div class="now-showing-info center">
+                                    <h4>
+                                        Explore the range of verity of movies...
+                                    </h4>
+                                </div>
+                                <div class="now-showing-btn center">
+                                    <a role="button" href="./templates/nowShowing.html" class="btn btn-2">Explore</a>
+                                </div>
+                            </div>
+                            <div class="box-2 booking">
+                                <div class="title center pt-3">
+                                    <h2>Book Your Seats Now</h2>
+                                </div>
+                                <div class="booking-img center">
+                                    <img class="box-img" src="./accets/img/book-tickets.jpeg" alt="">
+                                </div>
+                                <div class="book-ticket-info center">
+                                    <h4>Lets Dive into Cinema with Easy and Simple steps...</h4>
+                                </div>
+                                <div class="booking-btn center">
+                                    <a role="button" href="./templates/bookTickets.html" class="btn btn-2">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <article class="about" id="about"></article>
+            <article class="contact-us" id="contactUs"></article>
+        </main>
+        <footer></footer>
+        <script src="./accets/js/main.js"></script>
+    </body>
+</html>
