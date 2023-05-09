@@ -39,6 +39,11 @@
         }
        }
   }
+  #logged{
+    margin-top: 0.5rem;
+    margin-left: 40vw;
+  }
+
 </style>
     </head>
 
@@ -56,9 +61,13 @@
                         </ul>
 
                     </div>
-                    <div class="left pt-05 flex mr-3">
+                    <div class="left pt-05 flex mr-3" id="notLogged">
                         <a class="btn btn-2 link" type="button" href="/templates/signup.html">Sign Up</a>
                         <a class="btn btn-2 link" type="button" href="/templates/signin.html">Sign In</a>
+                    </div>
+                    <div class="left pt-05 flex mr-3">
+                        <div id="logged"></div>
+                        <a class="btn btn-2 link" type="button" onclick="logout()" id="logout-btn">Log Out</a>
                     </div>
                 </div>
                 <div class="container-fluid hangburder-container">
@@ -123,7 +132,7 @@
                                     </h4>
                                 </div>
                                 <div class="now-showing-btn center">
-                                    <a role="button" href="./templates/nowShowing.html" class="btn btn-2">Explore</a>
+                                    <a role="button"  class="btn btn-2" onclick="nowShowing()">Explore</a>
                                 </div>
                             </div>
                             <div class="box-2 booking">
@@ -137,7 +146,7 @@
                                     <h4>Lets Dive into Cinema with Easy and Simple steps...</h4>
                                 </div>
                                 <div class="booking-btn center">
-                                    <a role="button" href="./templates/bookTickets.html" class="btn btn-2">Explore</a>
+                                    <a role="button" onclick="booking()" class="btn btn-2">Explore</a>
                                 </div>
                             </div>
                         </div>

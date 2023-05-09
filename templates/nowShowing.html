@@ -11,6 +11,28 @@
          @media (max-width: 575px) {
         
   }
+  .show-timing-btn{
+    margin-top: 13px;
+    padding: 8px 25px 8px 25px;
+    border: 1px solid black;
+
+  }
+  .form-control{
+    border-radius: 8px;
+    padding: 8px 14px 8px 8px;
+  }
+  .search{
+    margin-top: 0.5rem;
+    margin-left: 40vw;
+  }
+  .filter-box{
+    margin: 1rem;
+  }
+  #filterDropdown
+  {
+    margin-left: 2px;
+    padding: 8px 8px 8px 8px;
+  }
     </style>
 </head>
 <body>
@@ -24,9 +46,11 @@
                         <li><a href="/index.html#about" class="list link">About</a></li>
                         <li><a href="/index.html#contactUs" class="list link">Contact Us</a></li>
                     </ul>
-
                 </div>
-              
+                <div class="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="userInput">
+                     <button class="btn btn-2" type="submit" onclick="searchMovie()">Search</button>
+                </div>
             </div>
             <div class="container-fluid hangburder-container">
                 <div class="hamburger-container">
@@ -45,35 +69,43 @@
     </header>
     <main>
 <article class="title">
-    <div class="title-text center text-white title-text">
-        <h1>NOW SHOWING IN CINEMAS</h1>
+    <div class="filter-box">
+        search movie by genre 
+        <select id="filterDropdown" onchange="searchMovieByG()">
+            <option value="#" selected>Select</option>
+            <option value="Action">Action</option>
+            <option value="Drama">Drama</option>
+            <option value="Horror">Horror</option>
+            <option value="Sci-fi">Sci-fi</option>
+          </select>          
+    </div>
+    <div class="title-text center text-black title-text text-center">
+        <h1>NOW SHOWING IN CINEMAS</h1><div id="filtered"></div>
     </div>
 </article>
         <article class="shows">
-            <section class="shows-section section mb-4">
-                <div class="container-fluid">
-                    <div class="shows-box">
-                        <div class=" show-cards flex-col mb-4">
-                            <div class="card card-1 box-style">
+            <section class="shows-section section mb-4 center">
+                <div class="container">
+                    <div class="shows-box" id="outerBox">
+                        <div class=" show-cards flex-col mb-4 text-center" style="height: 75vh;" id="box">
+                            <div class="card card-1 box-style" id="bholaa">
                                 <div class="card-title">
-                                    <h2>BHOLAA</h2>
+                                    <h2 class="h2-title">BHOLAA</h2>
                                 </div>
                                 <div class="card-img">
                                     <img src="../accets/img/now showing/bhola.jpg" alt="" style="width: 14rem;height: 18rem;">
                                 </div>
                                 <div class="card-desc">
-                                    <h4>Show Timings</h4>
-                                    <div class="timing">
-                                        <p>9am - 12pm</p>
-                                        <p>12pm - 3pm</p>
-                                        <p>3am - 6pm</p>
+                                    <div class="genre">Action, Drama
                                     </div>
-                                    <div class="book-bhola">
-                                        <a class="btn btn-2" href="/templates/bookTickets.html" role="button">Book</a>
+                                    <div class="timing" style="margin-top: 2px;">
+                                        <div class="show-timing-btn"><a href="/templates/bookTickets.html" class="link text-black">9 AM</a></div>
+                                        <div class="show-timing-btn"><a href="/templates/bookTickets.html" class="link text-black">12 PM</a></div>
+                                        <div class="show-timing-btn"><a href="/templates/bookTickets.html" class="link text-black">3 PM</a></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card card-3 box-style">
+                            <div class="card card-3 box-style" id="evild">
                                 <div class="card-title">
                                     <h2>EVIL DEAD RISE</h2>
                                 </div>
@@ -81,18 +113,16 @@
                                     <img src="../accets/img/now showing/evildeadrise.jpg" alt="" style="width: 14rem;height: 18rem;">
                                 </div>
                                 <div class="card-desc">
-                                    <h4>Show Timings</h4>
-                                    <div class="timing">
-                                        <p>9am - 12pm</p>
-                                        <p>12pm - 3pm</p>
-                                        <p>3am - 6pm</p>
+                                    <div class="genre">Horror
                                     </div>
-                                    <div class="book-evildeadrise">
-                                        <a class="btn btn-2" href="/templates/bookTickets.html" role="button">Book</a>
+                                    <div class="timing" style="margin-top: 2px;">
+                                        <div class="show-timing-btn"><a href="/templates/bookTickets.html"  class="link text-black" >9:30 AM</a></div>
+                                        <div class="show-timing-btn"><a href="/templates/bookTickets.html" class="link text-black">1 PM</a></div>
+                                        <div class="show-timing-btn"><a href="/templates/bookTickets.html" class="link text-black">6 PM</a></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card card-3 box-style">
+                            <div class="card card-3 box-style" id="fastx">
                                 <div class="card-title">
                                     <h2>FAST X</h2>
                                 </div>
@@ -100,18 +130,16 @@
                                     <img src="../accets/img/now showing/fastX.jpg" alt="" style="width: 14rem;height: 18rem;">
                                 </div>
                                 <div class="card-desc">
-                                    <h4>Show Timings</h4>
-                                    <div class="timing">
-                                        <p>9am - 12pm</p>
-                                        <p>12pm - 3pm</p>
-                                        <p>3am - 6pm</p>
+                                    <div class="genre">Action
                                     </div>
-                                    <div class="book-fastx">
-                                        <a class="btn btn-2" href="/templates/bookTickets.html" role="button">Book</a>
+                                    <div class="timing" style="margin-top: 2px;">
+                                        <div class="show-timing-btn"><a href="/templates/bookTickets.html" class="link text-black">10 AM</a></div>
+                                        <div class="show-timing-btn"><a href="/templates/bookTickets.html" class="link text-black">12:30 PM</a></div>
+                                        <div class="show-timing-btn"><a href="/templates/bookTickets.html" class="link text-black" >9 PM</a></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card card-4 box-style">
+                            <div class="card card-4 box-style" id="gog3">
                                 <div class="card-title center">
                                     <h2>GUARDIANS OF THE GALAXY VOL 3</h2>
                                 </div>
@@ -119,14 +147,12 @@
                                     <img src="../accets/img/now showing/gog3.jpg" alt="" style="width: 14rem;height: 18rem;">
                                 </div>
                                 <div class="card-desc">
-                                    <h4>Show Timings</h4>
-                                    <div class="timing">
-                                        <p>9am - 12pm</p>
-                                        <p>12pm - 3pm</p>
-                                        <p>3am - 6pm</p>
+                                    <div class="genre">Action, Drama, Sci-fi
                                     </div>
-                                    <div class="book-gog3">
-                                        <a class="btn btn-2" href="/templates/bookTickets.html" role="button">Book</a>
+                                    <div class="timing" style="margin-top: 2px;">
+                                        <div class="show-timing-btn"><a href="/templates/bookTickets.html" class="link text-black">9 AM</a></div>
+                                        <div class="show-timing-btn"><a href="/templates/bookTickets.html" class="link text-black">1:30 PM</a></div>
+                                        <div class="show-timing-btn"><a href="/templates/bookTickets.html" class="link text-black" onclick="showTiming(this)" id="show1">7 PM</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -137,5 +163,17 @@
         </article>
     </main>
     <script src="../accets/js/main.js"></script>
+    <script src="../accets/js/nowshowing.js"></script>
+    <script>
+       function showTiming(event){
+        let showTime = JSON.parse(localStorage.getItem('showTiming'))||[];
+        showTime.push({
+            showTime : document.getElementById(event.id).innerText
+      });
+    
+      // Save the updated cart items to Local Storage
+      localStorage.setItem('showTiming', JSON.stringify(showTime))
+       }
+    </script>
 </body>
 </html>

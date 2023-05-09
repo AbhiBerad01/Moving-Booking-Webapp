@@ -61,7 +61,7 @@
                         <div class="title center">
                             <h2>Sign Up</h2>
                         </div>
-                    <form method="post">
+                    <form id="signIn-form">
                         <label for="reg-id">Registration ID*</label>
                         <input type="text" id="reg-id" name="reg-id" placeholder="Enter registration ID" required pattern="[0-9A-Za-z]{8}" title="Registration ID must be 8 characters long with alphanumeric values">
                         <br>
@@ -74,7 +74,7 @@
                         <input type="password" id="password" name="password" placeholder="Enter password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" title="Password should have at least one small case letter, one uppercase letter, one digit, and one special character with a minimum password length of 8">
                         <br>
                         <button class="btn btn-2">Submit</button>
-                        <button class="btn btn-2">Cancel</button>
+                        <button class="btn btn-2" onclick="cancel()">Cancel</button>
                     </form>
                 </div>
                 </div>
@@ -82,5 +82,6 @@
         </article>
     </main>
     <footer></footer>
+    <script src="../accets/js/signin.js"></script>
 </body>
 </html>

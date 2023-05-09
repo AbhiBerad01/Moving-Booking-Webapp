@@ -7,6 +7,121 @@
     <title>Movie Booker | BOOK SEATS</title>
     <link rel="stylesheet" href="../accets/css/style.css">
     <link rel="stylesheet" href="../accets/css/hangburger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        td{
+            padding: 0px 5px 0px 5px;
+        }
+        tr {
+  display: block;
+  /* padding-top: 10px; */
+}
+
+.line {
+    height: 2px;
+    width: 65vw;
+    border-top: 1px solid rgb(222, 218, 218);
+}
+
+        .seatI{
+            border: 1px solid rgb(114, 227, 114);
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 4px;
+  text-align: center;
+        }
+        .seatR{
+            padding-right: 90px;
+        }
+        .flex-justify{
+            display: flex;
+            justify-content: center;
+        }
+         .seat-table{
+            padding: 30px 0px 0px 0px;
+        }
+        
+        .fixed-theatre{
+            min-width: 1045px;;
+        }
+        @media (min-width:2000px) {
+            .flex-justify{
+                display: block;
+            }
+        }
+        .booked{
+            background-color: blue;
+            color: white;
+            cursor: no-drop;
+        }
+        .own_booked{
+            background-color: rgb(205, 205, 66);
+            color: white;
+        }
+        .available{
+            background-color: rgb(54, 180, 54);
+            color: white;
+        }
+        .pay-button {
+  position: relative;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pay {
+  position: absolute;
+  bottom: 10px;
+}
+p {
+  font-size: 1em;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.ticket-price{
+    border: 1px solid #A8DADC;
+    box-shadow: 0 0 10px #A8DADC;
+  height: 37px;
+  width: 250px;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 4px;
+  text-align: center;
+}
+.pay{
+    border: 1px solid #ea5877;
+    background: #f84464;
+    color: white;
+  height: 37px;
+  width: 250px;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 4px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 0 10px #ea5877;
+  border-radius: 10px;
+}
+#gen{
+    display: none;
+}
+.timer{
+    margin-top: 1rem;
+    margin-left: 30rem;
+}
+
+    </style>
 </head>
 
 <body>
@@ -18,10 +133,10 @@
                     <ul class="nav-items flex ">
                         <li><a href="/index.html#home" class="list link">Home</a></li>
                         <li><a href="/index.html#explore" class="list link">Explore</a></li>
-                        <li><a href="/index.html#about" class="list link">About</a></li>
-                        <li><a href="/index.html#contactUs" class="list link">Contact Us</a></li>
                     </ul>
-
+                </div>
+                <div class="timer" id="timer">
+                    
                 </div>
             </div>
             <div class="container-fluid hangburder-container">
@@ -31,8 +146,6 @@
                       <ul class="hamburger-items">
                         <li><a href="/index.html#home" class="hamburger-link link">Home</a></li>
                         <li><a href="/index.html#explore" class="hamburger-link link">Explore</a></li>
-                        <li><a href="/index.html#about" class="hamburger-link link">About</a></li>
-                        <li><a href="/index.html#contactUs" class="hamburger-link link">Contact Us</a></li>
                       </ul>
                     </div>
                   </div>
@@ -41,346 +154,1069 @@
     </header>
     <main>
 <article class="title">
-    <div class=" center text-white ">
-        <h1>BOOK YOUR SEATS</h1>
+    <div class=" center text-white " id="movie-name">
+        
     </div>
 </article>
         <article class="book-seats">
             <section class="booking-section section ">
-                <div class="container-fluid center">
-                    <div class="container box-style" style="margin-bottom: 23px;">
-                        <div class="theatre center">
+                <div class="container-fluid flex-justify">
+                    <div class="container box-style fixed-theatre" style="margin-bottom: 23px;">
+                        <div class="theatre" >
                             <div class="theatre-hall">
-                                <div class="seats">
-                                    <div class="columns">
-                                            <div class="small-box">1</div>
-                                            <div class="small-box">2</div>
-                                            <div class="small-box">3</div>
-                                            <div class="small-box">4</div>
-                                            <div class="small-box">5</div>
-                                            <div class="small-box">6</div>
-                                            <div class="small-box">7</div>
-                                            <div class="small-box">8</div>
-                                            <div class="small-box">9</div>
-                                            <div class="small-box">10</div>
-                                            <div class="small-box">11</div>
-                                            <div class="small-box">12</div>
-                                            <div class="small-box">13</div>
-                                            <div class="small-box">14</div>
-                                            <div class="small-box">15</div>
-                                            <div class="small-box">16</div>
-                                            <div class="small-box">17</div>
-                                            <div class="small-box">18</div>
-                                            <div class="small-box">19</div>
-                                            <div class="small-box">20</div>
-                                            <div class="small-box">21</div>
-                                            <div class="small-box">22</div>
-                                            <div class="small-box">23</div>
-                                            <div class="small-box">24</div>
-                                            <div class="small-box">25</div>
-                                            <div class="small-box">26</div>
-                                            <div class="small-box">27</div>
-                                            <div class="small-box">28</div>
-                                            <div class="small-box">29</div>
-                                            <div class="small-box">30</div>                                      
-                                    </div>
-                                <div class="row-1 row-padding">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <span class="small-box">I</span>
-                                </div>
-                                <div class="row-2 row-padding">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <span class="small-box">H</span>
-                                </div>
-                                <div class="row-3 row-padding">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <span class="small-box">G</span>
-                                </div>
-                                <div class="row-4 row-padding">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <span class="small-box">F</span>
-                                </div>
-                                <div class="row-5 row-padding">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <span class="small-box">E</span>
-                                </div>
-                                <div class="row-6 row-padding">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <span class="small-box">D</span>
-                                </div>
-                                <div class="row-7 row-padding">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <span class="small-box">C</span>
-                                </div>
-                                <div class="row-8 row-padding">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <span class="small-box">B</span>
-                                </div>
-                                <div class="row-9 row-padding">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available"  name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <input type="checkbox" class="booked" name="" id="" disabled>
-                                    <input type="checkbox" class="available" name="" id="">
-                                    <span class="small-box">A</span>
-                                </div>
+                            <div class="seat-table">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="pricePremium">
+                                                <div class="seatP">PREMIUM-RS. 370</div>
+                                                <div class="line"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="seatR">A</div></td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="A_01">
+                                                    1
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="A_02">
+                                                    2
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="A_03">
+                                                    3
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="A_04">
+                                                    4
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="A_05">
+                                                    5
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="A_06">
+                                                    6
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="A_07">
+                                                    7
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="A_08">
+                                                    8
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="A_09">
+                                                    9
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="A_10">
+                                                10
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="A_11">
+                                            11
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="A_12">
+                                                12
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="A_13">
+                                                13
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="A_14">
+                                                14
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="A_15">
+                                                15
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="A_016">
+                                                    16
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="A_017">
+                                                    17
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="A_18">
+                                                18
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="A_19">
+                                                19
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="A_20">
+                                                20
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="seatR">B</div></td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="B_01">
+                                                    1
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="B_02">
+                                                    2
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="B_03">
+                                                    3
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="B_04">
+                                                    4
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="B_05">
+                                                    5
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="B_06">
+                                                    6
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="B_07">
+                                                    7
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="B_08">
+                                                    8
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="B_09">
+                                                    9
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="B_10">
+                                                10
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="B_11">
+                                            11
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="B_12">
+                                                12
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="B_13">
+                                                13
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="B_14">
+                                                14
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="B_15">
+                                                15
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="B_016">
+                                                    16
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="B_017">
+                                                    17
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="B_18">
+                                                18
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="B_19">
+                                                19
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="B_20">
+                                                20
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="seatR">C</div></td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="C_01">
+                                                    1
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="C_02">
+                                                    2
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="C_03">
+                                                    3
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="C_04">
+                                                    4
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="C_05">
+                                                    5
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="C_06">
+                                                    6
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="C_07">
+                                                    7
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="C_08">
+                                                    8
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="premium"  id="C_09">
+                                                    9
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="C_10">
+                                                10
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="C_11">
+                                            11
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="C_12">
+                                                12
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="C_13">
+                                                13
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="C_14">
+                                                14
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="C_15">
+                                                15
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="C_016">
+                                                    16
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="C_017">
+                                                    17
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="C_18">
+                                                18
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="C_19">
+                                                19
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="premium"  id="C_20">
+                                                20
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="priceExclusive">
+                                                <div class="seatP">EXCLUSIVE-RS. 350</div>
+                                                <div class="line"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="seatR">D</div></td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="D_01">
+                                                    1
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="D_02">
+                                                    2
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="D_03">
+                                                    3
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="D_04">
+                                                    4
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="D_05">
+                                                    5
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="D_06">
+                                                    6
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="D_07">
+                                                    7
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="D_08">
+                                                    8
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="D_09">
+                                                    9
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="D_10">
+                                                10
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="D_11">
+                                            11
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="D_12">
+                                                12
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="D_13">
+                                                13
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="D_14">
+                                                14
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="D_15">
+                                                15
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="D_016">
+                                                    16
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="D_017">
+                                                    17
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="D_18">
+                                                18
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="D_19">
+                                                19
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="D_20">
+                                                20
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="seatR">E</div></td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="E_01">
+                                                    1
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="E_02">
+                                                    2
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="E_03">
+                                                    3
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="E_04">
+                                                    4
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="E_05">
+                                                    5
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="E_06">
+                                                    6
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="E_07">
+                                                    7
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="E_08">
+                                                    8
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="E_09">
+                                                    9
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="E_10">
+                                                10
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="E_11">
+                                            11
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="E_12">
+                                                12
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="E_13">
+                                                13
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="E_14">
+                                                14
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="E_15">
+                                                15
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="E_016">
+                                                    16
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="E_017">
+                                                    17
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="E_18">
+                                                18
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="E_19">
+                                                19
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="E_20">
+                                                20
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr> 
+                                            <td><div class="seatR">F</div></td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_01">
+                                                    1
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_02">
+                                                    2
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_03">
+                                                    3
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_04">
+                                                    4
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_05">
+                                                    5
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_06">
+                                                    6
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="F_07">
+                                                    7
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="F_08">
+                                                    8
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="exclusive"  id="F_09">
+                                                    9
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_10">
+                                                10
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_11">
+                                            11
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_12">
+                                                12
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_13">
+                                                13
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_14">
+                                                14
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_15">
+                                                15
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_016">
+                                                    16
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_017">
+                                                    17
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_18">
+                                                18
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_19">
+                                                19
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="exclusive"  id="F_20">
+                                                20
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="priceNormal">
+                                                <div class="seatP">NORMAL-RS. 330</div>
+                                                <div class="line"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="seatR">G</div></td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="G_01">
+                                                    1
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="G_02">
+                                                    2
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="G_03">
+                                                    3
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="G_04">
+                                                    4
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="normal"  id="G_05">
+                                                    5
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="normal"  id="G_06">
+                                                    6
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="normal"  id="G_07">
+                                                    7
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="normal"  id="G_08">
+                                                    8
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="normal"  id="G_09">
+                                                    9
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="normal"  id="G_10">
+                                                10
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="normal"  id="G_11">
+                                            11
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI booked" name="normal"  id="G_12">
+                                                12
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="G_13">
+                                                13
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="G_14">
+                                                14
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="G_15">
+                                                15
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="G_016">
+                                                    16
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="G_017">
+                                                    17
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="G_18">
+                                                18
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="G_19">
+                                                19
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="G_20">
+                                                20
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="seatR">H</div></td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_01">
+                                                    1
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_02">
+                                                    2
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_03">
+                                                    3
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_04">
+                                                    4
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_05">
+                                                    5
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_06">
+                                                    6
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_07">
+                                                    7
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_08">
+                                                    8
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_09">
+                                                    9
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_10">
+                                                10
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_11">
+                                            11
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_12">
+                                                12
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_13">
+                                                13
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_14">
+                                                14
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_15">
+                                                15
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_016">
+                                                    16
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_017">
+                                                    17
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_18">
+                                                18
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_19">
+                                                19
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="H_20">
+                                                20
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="seatR">I</div></td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_01">
+                                                    1
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_02">
+                                                    2
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_03">
+                                                    3
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_04">
+                                                    4
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_05">
+                                                    5
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_06">
+                                                    6
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_07">
+                                                    7
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_08">
+                                                    8
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_09">
+                                                    9
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_10">
+                                                10
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_11">
+                                            11
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_12">
+                                                12
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_13">
+                                                13
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_14">
+                                                14
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_15">
+                                                15
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_016">
+                                                    16
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_017">
+                                                    17
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_18">
+                                                18
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_19">
+                                                19
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="I_20">
+                                                20
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="seatR">J</div></td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_01">
+                                                    1
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_02">
+                                                    2
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_03">
+                                                    3
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_04">
+                                                    4
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_05">
+                                                    5
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_06">
+                                                    6
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_07">
+                                                    7
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_08">
+                                                    8
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_09">
+                                                    9
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_10">
+                                                10
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_11">
+                                            11
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_12">
+                                                12
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_13">
+                                                13
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_14">
+                                                14
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_15">
+                                                15
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_016">
+                                                    16
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_017">
+                                                    17
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_18">
+                                                18
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_19">
+                                                19
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="seatI available"  onclick="booking_seat(this)" name="normal"  id="J_20">
+                                                20
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                             </div>
                         </div>
@@ -391,27 +1227,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid ">
-                    <div class="inst center">
-                        <div class="instructions">
-                            <div class="inst-booked">
-                                <label for="booked">Booked seats</label>
-                                <input type="checkbox" name="booked" id="" disabled>
-                            </div>
-                            <div class="inst-available">
-                                <label for="booked">Available seats</label>
-                                <input type="checkbox" name="booked" id="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="book-btn center mt-1 mb-4">
-                        <button class="btn btn-2">Book</button>
+               
+            </section>
+            <section class="confirm">
+                <div class="container box-style h-40 mb-4" id="gen" style="background-color: white;">
+                    <div class="receipt" id="receipt">
+                       
                     </div>
                 </div>
-                
             </section>
         </article>
     </main>
+    <script src="../accets/js/booking.js"></script>
     <script src="../accets/js/main.js"></script>
 </body>
 </html>
